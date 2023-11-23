@@ -11,6 +11,5 @@
 |HQ-SRV          |ens192              |192.168.0.126   |/25             |192.168.0.1           |                                   
 |BR-SRV          |ens192              |192.168.0.158   |/27             |192.168.0.129         |   
 
-##Тополоия
-
+## Тополоия
 ![Топология](https://github.com/Barmenkov/demo2024/blob/main/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA.PNG)
