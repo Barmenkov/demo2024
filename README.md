@@ -158,4 +158,27 @@ apt update
 ```
 apt install isc-dhcp-server
 ```
-
+### Вход
+```
+nano /etc/default/isc-dhcp-server
+```
+### Указать интерфейс, который смотрит в сторону HQ-S-RV
+```
+INTERFACESV4="ens###"
+```
+### Настройка раздачи адресов 
+```
+nano /etc/dhcp/dhcpd.conf
+```
+### Пример настройки конфига
+```
+subnet 192.168.0.0 netmask 255.255.255.0 {
+range 192.168.0.2 192.168.0.125;
+option domain-name-servers 8.8.8.8, 8.8.4.4;
+option routers 192.168.0.1;
+}
+```
+### Применить настройку
+```
+systemctl restart isc-dhcp-server.service
+```
