@@ -152,10 +152,10 @@ copy running-config startup-config
 ```
 ## 3. Установка и настройка DHCP.
 ### Установка
-'''
+```
 apt update
-'''
-'''
+```
+```
 apt install isc-dhcp-server
-'''
+```
 
