@@ -181,20 +181,24 @@ firewall-cmd --reload
 apt install network-manager 
 ```
 ### Далее (Добавить - IP tunnel)
+### HQ-R
 ![Топология](https://github.com/Barmenkov/demo2024/blob/main/%D0%91%D0%B5%D0%B7%D1%8B%D0%BC%D1%8F%D0%BD%D0%BD%D1%8B%D0%B9.png)
-###
+### BR-R
+![Топология](https://github.com/Barmenkov/demo2024/blob/main/%D0%91%D0%B5%D0%B7%D1%8B%D0%BC%D1%8F%D0%BD%D0%BD%D1%8B%D0%B92.png)
+### Для BR-R
 ```
-
+nmcli connection modify BR-R ip-tunnel.ttl 64
 ```
-###
 ```
-
+ip r add 192.168.0.0/25 dev gre1
 ```
-###
+### Для HQ-R
 ```
-
+nmcli connection modify HQ-R ip-tunnel.ttl 64
 ```
-
+```
+ip r add 192.168.0.128/27 dev gre1
+```
 ## 3. Установка и настройка DHCP.
 ### Установка
 ```
