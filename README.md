@@ -175,6 +175,28 @@ firewall-cmd --permanent --zone=public --add-masquerade
 ```
 firewall-cmd --reload
 ```
+## 2.2. GRE runnel HQ-R - BR-R.
+### Установка графического интерфейса nmtui.
+```
+apt install network-manager 
+```
+### Далее (Добавить - IP tunnel)
+```
+
+```
+###
+```
+
+```
+###
+```
+
+```
+###
+```
+
+```
+
 ## 3. Установка и настройка DHCP.
 ### Установка
 ```
