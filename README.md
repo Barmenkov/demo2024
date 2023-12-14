@@ -235,3 +235,20 @@ option routers 192.168.0.1;
 ```
 systemctl restart isc-dhcp-server.service
 ```
+## 3.1. Настройка и добавление пользователя на всех устройствах.
+```
+adduser admin
+```
+```
+usermod -aG root admin
+```
+```
+passwd admin
+```
+```
+"P@ssw0rd"
+```
+### Для проверки, установили ли пользователя, надо зайти в:
+```
+nano /etc/passwd
+```
